@@ -60,3 +60,9 @@ resource "docker_container" "quiz_app" {
 # data "external" "host_ip" {
 #   program = ["${path.module}/get_ip.sh"]
 # }
+
+
+resource "local_file" "example" {
+  content  = "Hello from Terraform!"
+  filename = "hello.txt"
+}
